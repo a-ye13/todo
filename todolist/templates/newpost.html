@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Checklist</title>
+  </head>
+
+  <body>
+    <nav>
+      <a href={{ url_for("show_index") }}><img id="logo" src={{ url_for("static", filename="images/logo.png") }} alt="Logo" /></a>
+      <img id="text" src={{ url_for("static", filename="images/text.png") }} alt="Name" />
+    </nav>
+
+    <form
+      action={{ request.path }}
+      method="post"
+      enctype="multipart/form-data"
+    >
+      username*:
+      <input type="text" name="username" />
+      <br>
+      task*:
+      <input type="text" name="task" />
+      <br>
+      due date*:
+      <input type="text" name="duedate" />
+      <br>
+      <input type="submit" name="newtask" value="make new task" />
+    </form>
+  </body>
+</html>

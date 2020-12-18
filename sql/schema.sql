@@ -12,6 +12,7 @@ CREATE TABLE tasks(
 	taskid INTEGER PRIMARY KEY,
 	owner VARCHAR(20),
     text VARCHAR(1024),
+	duedate VARCHAR(20),
 	FOREIGN KEY(owner) REFERENCES users(username) ON UPDATE CASCADE ON DELETE CASCADE
 );
 CREATE TABLE following(

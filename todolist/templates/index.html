@@ -1,4 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-    Hello world!
+<body>
+  <h1>Tasks To Do</h1>
+  {% for task in tasks %}
+  <p>{{task.owner}} {{task.text}} Due: {{task.duedate}}</p>
+  {% endfor %}
+  <form action="" method="post">
+    <input type="submit" name="submit_button" value="Add new task">
+  </form>
 </html>

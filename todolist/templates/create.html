@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Checklist</title>
+  </head>
+
+  <body>
+    <nav>
+      <a href={{ url_for("show_index") }}><img id="logo" src={{ url_for("static", filename="images/logo.png") }} alt="Logo" /></a>
+      <img id="text" src={{ url_for("static", filename="images/text.png") }} alt="Name" />
+    </nav>
+
+    <a href= {{ url_for("show_login") }} >Login Page</a>
+
+    <form
+      action={{ request.path }}
+      method="post"
+      enctype="multipart/form-data"
+    >
+      <input type="file" name="file" />
+      <br>
+      fullname*:
+      <input type="text" name="fullname" />
+      <br>
+      username*:
+      <input type="text" name="username" />
+      <br>
+      email*:
+      <input type="text" name="email" />
+      <br>
+      password*:
+      <input type="password" name="password" />
+      <br>
+      <input type="submit" name="signup" value="sign up" />
+    </form>
+  </body>
+</html>
